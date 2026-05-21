@@ -1,8 +1,10 @@
-const { Client } = require('whatsapp-web.js');
+const { Client, LocalAuth } = require('whatsapp-web.js'); // tambah LocalAuth
 const qrcode = require('qrcode-terminal');
 const axios = require('axios');
 
-const client = new Client();
+const client = new Client({
+    authStrategy: new LocalAuth() // ← tambahkan ini
+})
 
 client.on('qr', (qr) => {
     qrcode.generate(qr, { small: true });
