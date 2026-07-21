@@ -1,3 +1,2 @@
-2026/05/21-16:10:47.136 4f18 Reusing MANIFEST D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\Service Worker\Database/MANIFEST-000001
-2026/05/21-16:10:47.136 4f18 Recovering log #3
-2026/05/21-16:10:47.136 4f18 Reusing old log D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\Service Worker\Database/000003.log 
+2026/07/21-10:00:38.431 208 Creating DB D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\Service Worker\Database since it was missing.
+2026/07/21-10:00:38.526 208 Reusing MANIFEST D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\Service Worker\Database/MANIFEST-000001

@@ -1,3 +1,2 @@
-2026/05/21-16:10:47.202 6054 Reusing MANIFEST D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\shared_proto_db\metadata/MANIFEST-000001
-2026/05/21-16:10:47.203 6054 Recovering log #3
-2026/05/21-16:10:47.203 6054 Reusing old log D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\shared_proto_db\metadata/000003.log 
+2026/07/21-10:00:32.778 5064 Creating DB D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\shared_proto_db\metadata since it was missing.
+2026/07/21-10:00:33.354 5064 Reusing MANIFEST D:\0. RIFKY\Coding\wa-gateway\.wwebjs_auth\session\Default\shared_proto_db\metadata/MANIFEST-000001
