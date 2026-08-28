@@ -163,10 +163,23 @@ async function connectToWhatsApp() {
 
             console.log('🚀 Berhasil kirim ke Laravel'); 
 
-            // --- BAGIAN BARU: BACA INSTRUKSI BALASAN DARI LARAVEL ---
+            // --- BACA INSTRUKSI BALASAN DARI LARAVEL ---
             if (response.data && response.data.status === 'reply' && response.data.reply_message) {
                 await sock.sendMessage(remoteJid, { text: response.data.reply_message });
                 console.log(`🤖 Membalas ke user: ${response.data.reply_message.substring(0, 30)}...`);
+            }
+            
+            // --- TAMBAHAN BARU UNTUK MENU 3 (FILE EXCEL) ---
+            if (response.data && response.data.status === 'document') {
+                console.log(`📤 Mengirim dokumen ${response.data.file_name} ke pengguna...`);
+                const fileBuffer = Buffer.from(response.data.document_data, 'base64');
+                
+                await sock.sendMessage(remoteJid, {
+                    document: fileBuffer,
+                    mimetype: response.data.mimetype,
+                    fileName: response.data.file_name,
+                    caption: response.data.reply_message
+                });
             }
             // --------------------------------------------------------
 
@@ -180,5 +193,4 @@ async function connectToWhatsApp() {
     });
 }
 
-// Mulai bot[cite: 4]
 connectToWhatsApp(); 
