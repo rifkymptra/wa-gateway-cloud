@@ -74,7 +74,7 @@ async function connectToWhatsApp() {
                 console.log(`⏳ Mendaftarkan pegawai: ${namaPegawai}...`); 
                 
                 // Tembak ke route pendaftaran Laravel[cite: 4]
-                const response = await axios.post('http://127.0.0.1:8000/wa-register', { 
+                const response = await axios.post('https://chatbot-cloud-k6nz.onrender.com/wa-register', { 
                     nomor: nomorPengirim, 
                     nama: namaPegawai 
                 });
@@ -151,7 +151,7 @@ async function connectToWhatsApp() {
         // Kirim ke Webhook Laravel[cite: 4]
         try { 
             console.log('⏳ Mengirim ke Laravel...'); 
-            const response = await axios.post('http://127.0.0.1:8000/wa-webhook', { 
+            const response = await axios.post('https://chatbot-cloud-k6nz.onrender.com/wa-webhook', { 
                 nomor: nomorPengirim, 
                 pesan: textMessage, 
                 media: mediaData 
